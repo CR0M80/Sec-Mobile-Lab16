@@ -80,16 +80,13 @@ android sslpinning disable
 
 ---
 
-## 6. Cas pratique avec l’application Diva
+## 6. Cas pratique avec une application de test (InsecureBankv2)
 
-Un test a été réalisé sur l’application Diva afin de valider la méthode :
+Un test a été réalisé sur une application Android volontairement vulnérable afin de valider la méthode de contournement du SSL pinning.
 
 ```bash
-objection -g diva explore --startup-command "android sslpinning disable"
+objection -g InsecureBankv2 explore --startup-command "android sslpinning disable"
 ```
-
-Le comportement observé confirme la désactivation du SSL pinning et la possibilité d’interception du trafic.
-
 ---
 
 ## 9. Commande simplifiée
